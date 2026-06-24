@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+
+# generated build artifacts (regenerate with: node build-standalone.mjs)
+aesthetic-protocol-mobile.html
+dist/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
