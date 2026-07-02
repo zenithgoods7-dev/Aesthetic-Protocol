@@ -196,14 +196,6 @@
     setInterval(tick, 1000);
   }
 
-  /* ---- Checkout placeholder ---- */
-  Array.prototype.forEach.call(document.querySelectorAll('a[href="#"]'), function (a) {
-    a.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      alert("Connect your payment link here (Razorpay / Gumroad / Instamojo).\nReplace the # in href with your real checkout URL.");
-    });
-  });
-
   /* ---- Live coordinates flicker (ambient HUD detail) ---- */
   if (!reduce) {
     var coords = document.getElementById("coords");
