@@ -6,7 +6,7 @@ add your real cover image. To use your actual covers, save them in THIS
 folder with these exact filenames:
 
     aesthetic-dominion.jpg     ->  Book I  (The Aesthetic Dominion)
-    cardinal-mind.jpg          ->  Book II (The Cardinal Mind)
+    cardinal-mind.jpg          ->  Book II (The Sovereign Mind)
     wealth-architecture.jpg    ->  Book III (The Wealth Architecture)
 
 Tips

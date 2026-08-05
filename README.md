@@ -1,6 +1,6 @@
 # The Aesthetic Protocol
 
-Landing / sales site for a three‑ebook bundle — **The Aesthetic Dominion**, **The Cardinal Mind**, and **The Wealth Architecture**. Dark, tactical "operator's manual" theme with an accent colour that tunes per book (cyan / crimson / gold).
+Landing / sales site for a three‑ebook bundle — **The Aesthetic Dominion**, **The Sovereign Mind**, and **The Wealth Architecture**. Dark, tactical "operator's manual" theme with an accent colour that tunes per book (cyan / crimson / gold).
 
 It's a plain static site — no build step needed to run it.
 
