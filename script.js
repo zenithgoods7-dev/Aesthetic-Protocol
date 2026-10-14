@@ -51,7 +51,7 @@
   var revealTargets = [
     ".book__body > *", ".bundle__title", ".bundle__sub",
     ".bundle__card", ".inside__title", ".spec", ".audience__col",
-    ".quote", ".faq__title", ".faq__item", ".final__title",
+    ".contents__title", ".contents__sub", ".toc", ".contents__cta", ".faq__title", ".faq__item", ".final__title",
     ".final__sub", ".final .btn", ".hero__inner > *"
   ];
   var revealEls = [];
@@ -174,27 +174,41 @@
     }, { passive: true });
   }
 
-  /* ---- Countdown timer (48h rolling, persists in session) ---- */
-  var timerEl = document.getElementById("timer");
-  if (timerEl) {
-    var DURATION = 48 * 60 * 60 * 1000; // 48h
-    var key = "ap_launch_deadline";
-    var deadline = parseInt(sessionStorage.getItem(key) || "0", 10);
-    if (!deadline || deadline < Date.now()) {
-      deadline = Date.now() + DURATION;
-      try { sessionStorage.setItem(key, String(deadline)); } catch (e) {}
-    }
-    function pad(n) { return n < 10 ? "0" + n : "" + n; }
-    function tick() {
-      var diff = Math.max(0, deadline - Date.now());
-      var h = Math.floor(diff / 3600000);
-      var m = Math.floor((diff % 3600000) / 60000);
-      var s = Math.floor((diff % 60000) / 1000);
-      timerEl.textContent = pad(h) + ":" + pad(m) + ":" + pad(s);
-    }
-    tick();
-    setInterval(tick, 1000);
+  /* ---- Sticky mobile buy bar: visible once the hero is gone, hidden while another bundle CTA or the footer is on screen ---- */
+  var buybar = document.getElementById("buybar");
+  if (buybar && "IntersectionObserver" in window) {
+    var hero = document.getElementById("hero");
+    var blockers = [hero, document.getElementById("bundle"), document.getElementById("final"), document.querySelector(".footer")];
+    var onScreen = [];
+    var barObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var i = onScreen.indexOf(e.target);
+        if (e.isIntersecting && i < 0) onScreen.push(e.target);
+        if (!e.isIntersecting && i > -1) onScreen.splice(i, 1);
+      });
+      buybar.classList.toggle("is-visible", onScreen.length === 0);
+    });
+    blockers.forEach(function (el) { if (el) barObs.observe(el); });
   }
+
+  /* ---- Analytics: record checkout clicks (no-op until GA4 is configured in index.html) ---- */
+  var CHECKOUTS = {
+    "https://rzp.io/rzp/vTByvhtJ": { id: "book-1", name: "The Aesthetic Dominion" },
+    "https://rzp.io/rzp/FuuZ287":  { id: "book-2", name: "The Sovereign Mind" },
+    "https://rzp.io/rzp/9JprhaPP": { id: "book-3", name: "The Wealth Architecture" },
+    "https://rzp.io/rzp/21fnMdWJ": { id: "bundle", name: "Full Bundle" }
+  };
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest ? e.target.closest("a[href^='https://rzp.io/']") : null;
+    if (!link || typeof window.gtag !== "function") return;
+    var item = CHECKOUTS[link.getAttribute("href")] || { id: "unknown", name: link.getAttribute("href") };
+    var section = link.parentElement.closest("[id]");
+    window.gtag("event", "begin_checkout", {
+      currency: "INR",
+      items: [{ item_id: item.id, item_name: item.name }],
+      link_location: section ? section.id : "page"
+    });
+  });
 
   /* ---- Live coordinates flicker (ambient HUD detail) ---- */
   if (!reduce) {

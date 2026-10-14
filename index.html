@@ -2,10 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<!-- PRICING: bundle launch price ₹399 runs until 31 Oct 2026, then ₹599.
+     The 1 November price change checklist (every line to edit + the Razorpay amount) is in README.md → "Price change on 1 November 2026". -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#07090d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2307090d'/%3E%3Cpath d='M20 5 L34 33 H26 L20 19 L14 33 H6 Z' fill='%2343d4d8'/%3E%3C/svg%3E" />
 <title>Aesthetic Protocol — Three Operator's Guides. One System.</title>
 <meta name="description" content="The Aesthetic Dominion, The Sovereign Mind, and The Wealth Architecture. Three engineered guides to presence, influence, and wealth. Get the bundle for ₹399." />
+<!-- Google Analytics 4 (official gtag.js). Paste the Measurement ID ("G-…") below; the tag stays off until a valid ID is set. -->
+<script>
+  window.AP_GA_ID = "";
+  (function (id) {
+    if (!/^G-[A-Z0-9]+$/.test(id) || window.gtag) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", id, { allow_google_signals: false, allow_ad_personalization_signals: false });
+  })(window.AP_GA_ID);
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -93,7 +112,10 @@
   <article class="book" id="book-1" data-section="book-1" style="--accent:#43d4d8; --accent-soft:rgba(67,212,216,.14);">
     <div class="book__media">
       <div class="cover" data-accent="cyan">
-        <img class="cover__photo" loading="lazy" decoding="async" width="960" height="1280" src="assets/aesthetic-dominion.jpg" alt="The Aesthetic Dominion cover" onerror="this.remove()" />
+        <picture>
+          <source type="image/webp" srcset="assets/covers/aesthetic-dominion-480.webp 480w, assets/covers/aesthetic-dominion-720.webp 720w, assets/covers/aesthetic-dominion-960.webp 960w" sizes="(max-width: 860px) 340px, 470px" />
+          <img class="cover__photo" loading="lazy" decoding="async" width="960" height="1280" src="assets/aesthetic-dominion.jpg" alt="The Aesthetic Dominion cover" onerror="this.remove()" />
+        </picture>
         <div class="cover__art">
           <div class="cover__top"><span class="cover__mono">AP</span><span class="cover__tag">ENGINEER · REFINE · COMPOUND</span></div>
           <svg class="cover__bust" viewBox="0 0 120 150" aria-hidden="true"><use href="#bust"/></svg>
@@ -127,7 +149,10 @@
   <article class="book book--reverse" id="book-2" data-section="book-2" style="--accent:#e0202e; --accent-soft:rgba(224,32,46,.14);">
     <div class="book__media">
       <div class="cover" data-accent="crimson">
-        <img class="cover__photo" loading="lazy" decoding="async" width="960" height="1280" src="assets/cardinal-mind.jpg" alt="The Sovereign Mind cover" onerror="this.remove()" />
+        <picture>
+          <source type="image/webp" srcset="assets/covers/cardinal-mind-480.webp 480w, assets/covers/cardinal-mind-720.webp 720w, assets/covers/cardinal-mind-960.webp 960w" sizes="(max-width: 860px) 340px, 470px" />
+          <img class="cover__photo" loading="lazy" decoding="async" width="960" height="1280" src="assets/cardinal-mind.jpg" alt="The Sovereign Mind cover" onerror="this.remove()" />
+        </picture>
         <div class="cover__art">
           <div class="cover__top"><span class="cover__mono">AP</span><span class="cover__tag">PERCEIVE · PREDICT · INFLUENCE</span></div>
           <svg class="cover__bust" viewBox="0 0 120 150" aria-hidden="true"><use href="#bust"/></svg>
@@ -161,7 +186,10 @@
   <article class="book" id="book-3" data-section="book-3" style="--accent:#d8a93f; --accent-soft:rgba(216,169,63,.16);">
     <div class="book__media">
       <div class="cover" data-accent="gold">
-        <img class="cover__photo" loading="lazy" decoding="async" width="1023" height="1537" src="assets/wealth-architecture.jpg" alt="The Wealth Architecture cover" onerror="this.remove()" />
+        <picture>
+          <source type="image/webp" srcset="assets/covers/wealth-architecture-480.webp 480w, assets/covers/wealth-architecture-720.webp 720w, assets/covers/wealth-architecture-960.webp 960w" sizes="(max-width: 860px) 340px, 470px" />
+          <img class="cover__photo" loading="lazy" decoding="async" width="1023" height="1537" src="assets/wealth-architecture.jpg" alt="The Wealth Architecture cover" onerror="this.remove()" />
+        </picture>
         <div class="cover__art">
           <div class="cover__top"><span class="cover__mono">AP</span><span class="cover__tag">BUILD · COMPOUND · OWN</span></div>
           <svg class="cover__bust" viewBox="0 0 120 150" aria-hidden="true"><use href="#bust"/></svg>
@@ -216,10 +244,9 @@
         <li>All three guides — Dominion, Mind &amp; Architecture</li>
         <li>Instant download · read on any device</li>
         <li>Lifetime access · free future updates</li>
-        <li>Launch pricing — ends when the timer hits zero</li>
       </ul>
       <a href="https://rzp.io/rzp/21fnMdWJ" target="_blank" rel="noopener" class="btn btn--solid btn--xl" id="buyBundle">Unlock the bundle — ₹399</a>
-      <p class="bundle__timer">Launch price ends in <span id="timer">47:59:59</span></p>
+      <p class="bundle__deadline">Launch price ₹399 until 31 October. Then ₹599.</p>
     </div>
   </div>
 </section>
@@ -256,15 +283,48 @@
   </div>
 </section>
 
-<!-- ===== Testimonials (replace with real reviews) ===== -->
-<section class="proof">
-  <p class="eyebrow eyebrow--center">FIELD REPORTS</p>
-  <div class="proof__grid">
-    <figure class="quote"><blockquote>"Read like a blueprint. I rebuilt my wardrobe and my mornings in a weekend."</blockquote><figcaption>— R. Mehta, Bengaluru</figcaption></figure>
-    <figure class="quote"><blockquote>"The Sovereign Mind changed how I walk into every meeting. Worth ten times the price."</blockquote><figcaption>— A. Khan, Mumbai</figcaption></figure>
-    <figure class="quote"><blockquote>"Wealth Architecture finally made investing make sense. No hype, just structure."</blockquote><figcaption>— S. Patel, Ahmedabad</figcaption></figure>
+<!-- ===== Contents preview — chapter/section names taken verbatim from the books ===== -->
+<section class="contents" id="contents">
+  <p class="eyebrow eyebrow--center">FROM THE CONTENTS</p>
+  <h2 class="contents__title">Open the manuals.</h2>
+  <p class="contents__sub">Real chapter and section names, straight from the books in the bundle.</p>
+  <div class="contents__grid">
+    <article class="toc" style="--c:#43d4d8">
+      <p class="toc__label">PROTOCOL I</p>
+      <h3 class="toc__book">The Aesthetic Dominion</h3>
+      <p class="toc__scope">Chapters</p>
+      <ol class="toc__list">
+        <li><span>01</span>The Operator's Manifesto</li>
+        <li><span>02</span>Face Engineering</li>
+        <li><span>03</span>Physique as Architecture</li>
+        <li><span>04</span>Style as Signal</li>
+      </ol>
+    </article>
+    <article class="toc" style="--c:#e0202e">
+      <p class="toc__label">PROTOCOL II</p>
+      <h3 class="toc__book">The Sovereign Mind</h3>
+      <p class="toc__scope">Chapters</p>
+      <ol class="toc__list">
+        <li><span>01</span>Deception</li>
+        <li><span>02</span>Psychology</li>
+        <li><span>03</span>Manipulation</li>
+        <li><span>04</span>Patterns</li>
+        <li><span>05</span>Influence</li>
+      </ol>
+    </article>
+    <article class="toc" style="--c:#d8a93f">
+      <p class="toc__label">PROTOCOL III</p>
+      <h3 class="toc__book">The Wealth Architecture</h3>
+      <p class="toc__scope">Chapters</p>
+      <ol class="toc__list">
+        <li><span>01</span>Money Psychology</li>
+        <li><span>02</span>Financial Literacy</li>
+        <li><span>03</span>The Digital Product Empire</li>
+        <li><span>04</span>Personal Brand as Leverage</li>
+      </ol>
+    </article>
   </div>
-  <p class="proof__note">Sample reviews — replace with your real customer testimonials.</p>
+  <a href="#bundle" class="btn btn--ghost contents__cta">Get all three — ₹399</a>
 </section>
 
 <!-- ===== FAQ ===== -->
@@ -275,7 +335,7 @@
     <details class="faq__item"><summary>What format are the books?<span class="faq__plus"></span></summary><p>Each guide is a designed PDF, optimised to read cleanly on phone, tablet, or desktop. Download once and keep it forever.</p></details>
     <details class="faq__item"><summary>How do I get them after paying?<span class="faq__plus"></span></summary><p>Delivery is instant. The moment your payment clears, the download links are unlocked and also sent to your email.</p></details>
     <details class="faq__item"><summary>Can I buy just one book?<span class="faq__plus"></span></summary><p>Yes — any single guide is ₹199. But all three together are just ₹399 — the price of two — so most readers take the full bundle.</p></details>
-    <details class="faq__item"><summary>Is the ₹399 price permanent?<span class="faq__plus"></span></summary><p>No. ₹399 is launch pricing, down from ₹599. Once the launch window closes the price goes back up.</p></details>
+    <details class="faq__item"><summary>Is the ₹399 price permanent?<span class="faq__plus"></span></summary><p>No. ₹399 is the launch price for the full bundle until 31 October 2026. From 1 November 2026 the bundle is ₹599.</p></details>
     <details class="faq__item"><summary>Do you offer refunds?<span class="faq__plus"></span></summary><p>Because these are instant digital downloads, all sales are final. Read the previews and pillars above before you buy.</p></details>
   </div>
 </section>
@@ -304,7 +364,17 @@
     <nav class="footer__links"><a href="#books">Books</a><a href="#bundle">Bundle</a><a href="#faq">FAQ</a><a href="mailto:zenithgoods7@gmail.com">Contact</a></nav>
     <span class="footer__coords">26.8467° N · 80.9462° E</span>
   </div>
+  <p class="footer__disclaimer">Educational content only. Not financial, investment, medical or legal advice.</p>
 </footer>
+
+<!-- ===== Sticky mobile purchase bar (≤860px; JS shows it between the hero and the bundle/final CTAs) ===== -->
+<div class="buybar" id="buybar">
+  <div class="buybar__info">
+    <span class="buybar__label">All 3 books · launch price</span>
+    <span class="buybar__price"><s>₹599</s> ₹399</span>
+  </div>
+  <a href="https://rzp.io/rzp/21fnMdWJ" target="_blank" rel="noopener" class="btn btn--solid buybar__btn">Get the bundle</a>
+</div>
 
 <!-- Shared SVG: classical bust silhouette used inside covers -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">

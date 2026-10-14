@@ -15,6 +15,9 @@ const jsBefore = html;
 html = html.replace(/<script src="script\.js"><\/script>/, () => `<script>\n${js}\n</script>`);
 if (html === jsBefore) throw new Error('script tag not replaced');
 
+// The page serves responsive WebP covers via <source srcset>; the single-file build embeds one JPEG per cover instead.
+html = html.replace(/[ \t]*<source type="image\/webp"[^>]*>\r?\n?/g, '');
+
 let total = 0, usedOptimized = false;
 for (const name of ['aesthetic-dominion.jpg', 'cardinal-mind.jpg', 'wealth-architecture.jpg']) {
   const opt = dir + '/assets/mobile/' + name;
