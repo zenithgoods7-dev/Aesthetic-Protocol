@@ -5,7 +5,7 @@ The site shows a built-in styled placeholder cover for each book until you
 add your real cover image. To use your actual covers, save them in THIS
 folder with these exact filenames:
 
-    aesthetic-dominion.jpg     ->  Book I  (The Aesthetic Dominion)
+    aesthetic-dominion.jpg     ->  Book I  (The Aesthetic Protocol)
     cardinal-mind.jpg          ->  Book II (The Sovereign Mind)
     wealth-architecture.jpg    ->  Book III (The Wealth Architecture)
 

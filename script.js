@@ -193,10 +193,10 @@
 
   /* ---- Analytics: record checkout clicks (no-op until GA4 is configured in index.html) ---- */
   var CHECKOUTS = {
-    "https://rzp.io/rzp/vTByvhtJ": { id: "book-1", name: "The Aesthetic Dominion" },
-    "https://rzp.io/rzp/FuuZ287":  { id: "book-2", name: "The Sovereign Mind" },
-    "https://rzp.io/rzp/9JprhaPP": { id: "book-3", name: "The Wealth Architecture" },
-    "https://rzp.io/rzp/21fnMdWJ": { id: "bundle", name: "Full Bundle" }
+    "https://rzp.io/rzp/RToCMe7":  { id: "book-1", name: "The Aesthetic Protocol" },
+    "https://rzp.io/rzp/Q9XWOc0a": { id: "book-2", name: "The Sovereign Mind" },
+    "https://rzp.io/rzp/n1Hao6k":  { id: "book-3", name: "The Wealth Architecture" },
+    "https://rzp.io/rzp/ADl161Vz": { id: "bundle", name: "The Sovereign Operator Bundle" }
   };
   document.addEventListener("click", function (e) {
     var link = e.target.closest ? e.target.closest("a[href^='https://rzp.io/']") : null;
